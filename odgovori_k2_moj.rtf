@@ -1,0 +1,566 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil Consolas;}{\f2\fnil\fcharset0 Consolas;}{\f3\fnil\fcharset238 Consolas;}{\f4\fnil\fcharset2 Symbol;}}
+{\colortbl ;\red0\green0\blue0;\red43\green145\blue175;\red163\green21\blue21;\red0\green0\blue255;\red0\green128\blue128;\red128\green128\blue128;\red255\green0\blue0;\red0\green128\blue0;}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sl240\slmult1\f0\fs22\lang9 1. Sta ce biti prikazano na standardnom izlazu nakon izvrsavanja sledeceg koda:\line\line\cf1\f1\fs19  \cf2 vector\cf1 <\cf2 string\cf1 > spisak;\par
+    spisak.push_back(\cf3 "Beba"\cf1 );\par
+    spisak.push_back(\cf3 "Marko"\cf1 );\par
+    spisak.push_back(\cf3 "Daca"\cf1 );\par
+    spisak.push_back(\cf3 "Milan"\cf1 );\par
+    \cf4 for\cf1  (\cf4 unsigned\cf1  i = 0; i < spisak.size(); i++)\par
+    \{\par
+        cout \cf5 <<\cf1  spisak\cf5 [\cf1 i\cf5 ]<<\cf1  \cf3 " - "\cf1 ;\par
+    \}\par
+\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\b Beba - Marko - Daca - Milan -\cf0\b0\f0\fs22\par
+
+\pard\sl240\slmult1\par
+\par
+\cf1\f2\fs19\lang1033 2.Koji je rezultat izvrsavanja sledeceg programa:\par
+\par
+\f1  \cf4 int\cf1  vred = 30;\par
+    \cf4 try\cf1\par
+    \{\par
+        \cf4 if\cf1  (vred < 20) \cf4 throw\cf1  vred;\par
+    \}\par
+    \cf4 catch\cf1  (\cf4 int\cf1  vred)\par
+    \{\par
+        cout \cf5 <<\cf1  \cf3 "U klauzuli catch."\cf1  \cf5 <<\cf1  endl;\par
+    \}\par
+    ue << endl;\par
+    \cf4 return\cf1  0;\par
+\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\b Program ima gresku prevodjenja.\cf0\b0\f0\fs22\lang9\par
+
+\pard\sl240\slmult1\cf1\b\f1\fs19\lang1033\par
+\par
+\b0\f2 3. Sta ce biti prikazano na standardnom izlazu nakon izvrsavanja sledeceg koda:\par
+\par
+\f1    \cf2 vector\cf1 <\cf4 int\cf1 > ListaCelih(5);\par
+    \cf4 int\cf1  n = 1;\par
+    \cf4 for\cf1  (\cf4 auto\cf1  &p: ListaCelih)\par
+    \{\par
+        \cf4 if\cf1  (n % 2 == n % 3)\par
+            p = 2 * n;\par
+        \cf4 else\cf1\par
+            p = 3 * n;\par
+            n = p - 2;\par
+    \}\par
+    \cf4 for\cf1  (\cf4 auto\cf1  p: ListaCelih)\par
+    \{\par
+        cout \cf5 <<\cf1  p \cf5 <<\cf1  \cf3 " "\cf1 ;\par
+    \}\par
+    cout \cf5 <<\cf1  endl\cf5 <<\cf1 endl;\par
+\cf0\f0\fs22\lang9\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\b 2 0 -6 -24 -78\b0\par
+
+\pard\sl240\slmult1\par
+\par
+4. Sta ce biti prikazano na standardnom izlazu nakon izvrsavanja sledeceg koda:\par
+\par
+\cf1\f1\fs19  \cf2 vector\cf1 <\cf4 int\cf1 > intList(7);\par
+    intList\cf5 [\cf1 0\cf5 ]\cf1  = 5;\par
+    \cf4 for\cf1  (\cf4 int\cf1  i = 1; i < 7; i++)\par
+        intList\cf5 [\cf1 i\cf5 ]\cf1  = 2 * intList\cf5 [\cf1 i - 1\cf5 ]\cf1  + i;\par
+        \cf4 for\cf1  (\cf4 int\cf1  i = 0; i < 7; i++)\par
+            cout \cf5 <<\cf1  intList.at(i) \cf5 <<\cf1  \cf3 " "\cf1 ;\par
+\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\b 5 11 24 51 106 217 440\b0\par
+
+\pard\sl240\slmult1\par
+\par
+\par
+\f2\lang1033 5.Oznacite linije koda koje su pogresne:\par
+\par
+\cf6\f1 #include\cf1  \cf3 <iostream>\cf1\par
+\cf4 using\cf1  \cf4 namespace\cf1  std;\par
+\par
+\cf4 int\cf1  main()\par
+\{\par
+    \cf4 int\cf1  n1\{ 300 \};\par
+    \cf4 int\cf1  n2\{ 10 \};\par
+    \cf4 try\cf1\par
+    \{\par
+\cf7\ul\b         kol = n1 / n2;\par
+\cf1\ulnone\b0     \}\cf7\ul\par
+\b     cout << "\f2 Kolicnik\f1  je " << kol << endl;\par
+\cf1\ulnone\b0     \cf4 catch\cf1  (\cf2 string\cf1  exceptionString)\par
+    \{\par
+        cout \cf5 <<\cf1  exceptionString;\par
+    \}\par
+    \cf4 return\cf1  0;\par
+\f2\}\f1\par
+\lang9\par
+\cf7\ul\b\f2\lang1033 #linije koje su pogresne su oznacene ovako\f1\lang9\par
+\cf1\ulnone\b0\par
+\par
+\f2\lang1033 5.Oznacite linije koda koje su pogresne:\par
+\f1\par
+\cf6 #include\cf1  \cf3 <iostream>\cf1\par
+\cf4 using\cf1  \cf4 namespace\cf1  std;\par
+\par
+\cf4 template\cf1 <\cf4 class\cf1  \cf2 T\cf1 >\par
+\cf2 T\cf1  square(\cf2 T\cf1  \cf6 number\cf1 )\par
+\{\par
+\cf7\ul\b     return T * T;\par
+\cf1\ulnone\b0\}\par
+\par
+\cf4 int\cf1  main()\par
+\{\par
+    \cf4 double\cf1  n\{ 3.14 \};\par
+    cout \cf5 <<\cf1  square(n) \cf5 <<\cf1  endl;\par
+    \cf4 return\cf1  0;\lang9\par
+\f2\lang1033\}\f1\lang9\par
+\par
+\par
+\f2\lang1033 6.Sta se ispisuje na izlazu nakon izvrsavanja sledeceg programa:\par
+\par
+\cf6\f1 #include\cf1  \cf3 <iostream>\cf1\par
+\cf6 #include\cf1  \cf3 <vector>\cf1\par
+\cf4 using\cf1  \cf4 namespace\cf1  std;\par
+\par
+\cf4 template\cf1 <\cf4 class\cf1  \cf2 Iterator\cf1 >\par
+\cf4 void\cf1  double_each_element(\cf2 Iterator\cf1  \cf6 begin\cf1 , \cf2 Iterator\cf1  \cf6 end\cf1 ) \{\par
+    \cf4 for\cf1  (\cf4 auto\cf1  it = \cf6 begin\cf1 ; it != \cf6 end\cf1 ; ++it) \{\par
+        *it *= 2;\par
+    \}\par
+\}\par
+\par
+\cf4 int\cf1  main() \{\par
+    std::\cf2 vector\cf1 <\cf4 int\cf1 > v\{ 1, 2, 3, 4, 5, 6 \};\par
+    double_each_element(v.begin(), v.end());           \cf8 // 1. Prolaz: ceo vektor\cf1\par
+    double_each_element(v.begin(), v.begin() \cf5 +\cf1  3);     \cf8 // 2. Prolaz: prva tri elementa\cf1\par
+    double_each_element(&v\cf5 [\cf1 0\cf5 ]\cf1 , &v\cf5 [\cf1 3\cf5 ]\cf1 );                 \cf8 // 3. Prolaz: prva tri elementa (isto kao i 2. prolaz)\cf1\par
+    \cf4 for\cf1  (\cf4 auto\cf1  e : v) cout \cf5 <<\cf1  e \cf5 <<\cf1  \cf3 " "\cf1 ;                 \cf8 // Ispis vektora\cf1\par
+    cout \cf5 <<\cf1  endl;\par
+    \cf4 return\cf1  0;\par
+\f2\}\par
+\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\b 8 16 24 8 10 12 \b0\f1\par
+
+\pard\sl240\slmult1\lang9\par
+\par
+\f2\lang1033 7.Oznacite linije koje sadrze greske u sledecem programskom kodu:\f1\lang9\par
+\par
+\cf6 #include\cf1  \cf3 <iostream>\cf1\par
+\cf4 using\cf1  \cf4 namespace\cf1  std;\par
+\par
+void fun(double x) throw (double)\par
+\{\par
+    \cf4 if\cf1  (\cf6 x\cf1  < 10.0) \cf4 throw\cf1  10.0;\par
+\}\par
+\par
+\cf4 int\cf1  main() \{\par
+    \cf7\ul\b fun(5);\f2\lang1033  mozda ova ipak zato sto nema try catch\f1\lang9\par
+\cf1\ulnone\b0     \cf4 return\cf1  0;\par
+\f2\lang1033\}\f1\lang9\par
+\par
+\par
+\f2\lang1033 8.Sta se ispisuje na izlazu nakon izvrsavanja sledeceg programa:\par
+\f1\par
+\cf4 template\cf1 <\cf4 class\cf1  \cf2 Container\cf1 >\par
+\cf4 int\cf1  count(\cf4 const\cf1  \cf2 Container\cf1 & \cf6 container\cf1 ) \{\par
+    \cf4 int\cf1  sum = 0;\par
+    \cf4 for\cf1  (\cf4 auto\cf1 && e : \cf6 container\cf1 )\par
+    \{\par
+        sum += 1;\par
+    \}\par
+    \cf4 return\cf1  sum;\par
+\}\par
+\par
+\cf4 int\cf1  main() \{\par
+    std::\cf2 vector\cf1 <\cf4 int\cf1 > v1\{ 3,1,4,1,5,9,2,6 \};\par
+    std::\cf2 vector\cf1 <\cf4 int\cf1 > v2\{ v1.begin()\cf5 +\cf1 1,v1.end()\cf5 -\cf1 2 \};\par
+    \cf4 int\cf1  n1 = count(v1);\par
+    \cf4 int\cf1  n2 = count(v2);\par
+    cout \cf5 <<\cf1  n1 \cf5 <<\cf1  \cf3 " "\cf1  \cf5 <<\cf1  n2;\par
+\f2\}\f1\lang9\par
+\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\b\f2\lang1033 8 5\b0\f1\lang9\par
+
+\pard\sl240\slmult1\par
+\par
+\f2\lang1033 9. Osnovne kategorije kontejnera u jeziku C++ su\par
+\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\b Asocijativni kontejneri\par
+{\pntext\f4\'B7\tab}Kontejnerski adapteri\par
+{\pntext\f4\'B7\tab}Kontejneri Sekvenci\f1\lang9\par
+
+\pard\sl240\slmult1\b0\par
+\par
+\par
+\f2\lang1033 10. Osnovni operatori koji definisu ponasanje SVIH iteratora su:\par
+\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\b --Pomera iterator na prethodni element\par
+{\pntext\f4\'B7\tab}== Proverava istu poziciju dva iteratora\par
+{\pntext\f4\'B7\tab}->Pristupa clanu elemenata na tekucoj poziciji\par
+{\pntext\f4\'B7\tab}* Vraca element na tekucoj poziciji\par
+{\pntext\f4\'B7\tab}++ Pomera iterator na sledeci element\par
+{\pntext\f4\'B7\tab}= Dodaljuje vrednost iteratora\b0\f1\lang9\par
+
+\pard\sl240\slmult1\par
+\par
+\f2\lang1033 11. Sta ce biti prikazano na standardnom izlazu nakon izvrsavanja sledeceg koda:\par
+\par
+\f1     \cf2 vector\cf1 <\cf4 int\cf1 > ListaCelih(5);\par
+    \cf4 for\cf1  (\cf4 int\cf1  i = 0; i < 5; i++)\par
+        ListaCelih\cf5 [\cf1 i\cf5 ]\cf1  = i * (i + 1);\par
+    \cf4 for\cf1  (\cf4 auto\cf1  p : ListaCelih)\par
+        cout \cf5 <<\cf1  p \cf5 <<\cf1  \cf3 " "\cf1 ;\par
+\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\b\f2 0 2 6 12 20\b0\f1\lang9\par
+
+\pard\sl240\slmult1\par
+\par
+\f2\lang1033 12. Standardna biblioteka sablona (STL)\par
+\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\b Po obimu znatno manja od Standardne biblioteke jezika C++\par
+{\pntext\f4\'B7\tab}Predstavlja deo Standardne biblioteke jezika C++\par
+
+\pard\sl240\slmult1\b0\par
+\par
+13.Osnovne komponente Standardne biblioteka sablona (STL) su\par
+\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\b kontejneri\par
+{\pntext\f4\'B7\tab}\f1 iteratori\par
+{\pntext\f4\'B7\tab}algoritmi\par
+{\pntext\f4\'B7\tab}funkcijski objekti\lang9\par
+
+\pard\sl240\slmult1\b0\par
+\par
+\f2\lang1033 14.Regularni izrazi u jeziku C++\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\b\f1\lang9\par
+{\pntext\f4\'B7\tab}Postoje u STL biblioteci od verzije C++11.\par
+{\pntext\f4\'B7\tab}Postoje i mogu se koristiti preko zaglavlja <regex>.\par
+
+\pard\sl240\slmult1\b0\par
+\par
+\f2\lang1033 15.Sta ce biti prikazano na standardnom izlazu nakon izvrsavanja sledeceg koda:\par
+\par
+\f1   \cf2 vector\cf1 <\cf4 int\cf1 > listaCelih(10);\par
+    \cf4 for\cf1  (\cf4 int\cf1  i = 0; i < 10; i++)\par
+        listaCelih\cf5 [\cf1 i\cf5 ]\cf1  = 2 * i + 5;\par
+        cout \cf5 <<\cf1  listaCelih.front() \cf5 <<\cf1  \cf3 " "\cf1  \cf5 <<\cf1  listaCelih.back() \cf5 <<\cf1  endl;\lang9\par
+\b\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\f2\lang1033 5 23\f1\lang9\par
+
+\pard\sl240\slmult1\par
+\par
+\b0\f2\lang1033 16. Osnovne vrste (kategorije) iteratora su:\par
+\f1\lang9\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\b Jednosmerni(froward)\par
+{\pntext\f4\'B7\tab}Izlazni i ulazni\par
+{\pntext\f4\'B7\tab}Biditekcioni (bidirectional)\par
+{\pntext\f4\'B7\tab}S direktnim pristupom (random access)\par
+
+\pard\sl240\slmult1\par
+\par
+\b0\f2\lang1033 17.Sabloni STL kontejnerskih klasa definisani su sledecim zaglavljima\par
+\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\b vector\par
+{\pntext\f4\'B7\tab}\f3 array \par
+{\pntext\f4\'B7\tab}deque\par
+{\pntext\f4\'B7\tab}list \par
+{\pntext\f4\'B7\tab}\f2 forward_list\f3\par
+{\pntext\f4\'B7\tab}map\par
+{\pntext\f4\'B7\tab}\f2 unordered_map\line set\par
+{\pntext\f4\'B7\tab}unordered_set\line bitset\f3\par
+
+\pard\sl240\slmult1\b0\f2\line\f1\lang9\par
+\f2\lang1033 18.Koji je rezultat prevodjenja sledeceg programa?\f1\lang9\par
+\b\par
+\cf6\b0 #include\cf1  \cf3 <iostream>\cf1\par
+\cf4 using\cf1  \cf4 namespace\cf1  std;\par
+\cf4 int\cf1  main() \{\par
+\par
+    \cf4 int\cf1  vred = 30;\par
+    \cf4 try\cf1\par
+    \{\par
+        \cf4 if\cf1  (vred > 30)\cf4 throw\cf1  vred;\par
+    \}\par
+    cout << vred;\par
+    \cf4 return\cf1  0;  \par
+\f2\lang1033\}\b\f1\lang9\par
+\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1 Program ima gresku prevodjenja\par
+
+\pard\sl240\slmult1\b0\par
+\par
+\f2\lang1033 19.Rezultat izvrsavanja sledeceg programa (tacke u rezultatu oznacavaju prazno mesto - blank):\par
+\par
+\cf6\f1 #include\cf1  \cf3 <iostream>\cf1\par
+\cf4 using\cf1  \cf4 namespace\cf1  \f2 ::\f1 std;\f2\par
+\par
+\cf4\f1 int\cf1  main() \{\par
+\par
+    \cf2 ios_base\cf1 ::\cf2 fmtflags\cf1  original_flags = cout.flags();\par
+    cout \cf5 <<\cf1  123 \cf5 <<\cf1  \cf3 "|"\cf1 ;\par
+    cout.setf(\cf2 ios_base\cf1 ::left, \cf2 ios_base\cf1 ::adjustfield);\par
+    cout.width(5);\par
+    cout \cf5 <<\cf1  124 \cf5 <<\cf1  125 \cf5 <<\cf1  \cf3 ' '\cf1 ;\par
+    cout.unsetf(\cf2 ios_base\cf1 ::adjustfield);\par
+    cout.precision(2);\par
+    cout.setf(\cf2 ios_base\cf1 ::uppercase | \cf2 ios_base\cf1 ::scientific);\par
+    cout \cf5 <<\cf1  131.0;\par
+    cout.flags(original_flags);\par
+\f2\}\par
+\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\b 123|124..125.1.31E+02\b0\f1\lang9\par
+
+\pard\sl240\slmult1\par
+\b\f2\lang1033\par
+\b0 20. Koji je rezultat izvrsavanja sledeceg programa\line\par
+\f1\par
+\cf6 #include\cf1  \cf3 <iostream>\cf1\par
+\cf6 #include\cf3 <cmath>\cf1\par
+\cf6 #include\cf3 <iomanip>\cf1\par
+\cf4 using\cf1  \cf4 namespace\cf1  std;\par
+\par
+\cf4 int\cf1  main() \{\par
+    \cf4 double\cf1  x, y;\par
+    x = 8.0;\par
+    y = 3.0;\par
+\par
+    cout \cf5 <<\cf1  showpoint \cf5 <<\cf1  setprecision(2);\par
+    cout \cf5 <<\cf1  x \cf5 <<\cf1  \cf3 "^"\cf1  \cf5 <<\cf1  y \cf5 <<\cf1  \cf3 " = "\cf1  \cf5 <<\cf1  pow(x, y) \cf5 <<\cf1  \cf3 " "\cf1  \cf5 <<\cf1  \cf4 static_cast\cf1 <\cf4 int\cf1 >(sqrt(pow(x, y))) \cf5 <<\cf1  endl;\par
+\f2\}\par
+\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\b 8.0^3.0 = 5.1e+02 22\b0\f1\lang9\par
+
+\pard\sl240\slmult1\par
+
+\pard\sl240\slmult1\f2\lang1033 21.Oznacite linije koda koje su pogresne:\par
+\par
+\cf6\f1 #include\cf1  \cf3 <iostream>\cf1\par
+\cf4 using\cf1  \cf4 namespace\cf1  std;\par
+\par
+\cf4 int\cf1  main() \{\par
+\par
+\par
+    \cf4 int\cf1  n1\{ 300 \};\par
+    \cf4 int\cf1  n2\{ 10 \};\cf7\par
+\ul     \b\f2 catch\f1\par
+\cf1\ulnone\b0     \{\par
+\cf7\ul         \b kol = n1 / n2;\par
+\cf1\ulnone\b0         cout \cf5 <<\cf1  \cf3 "Kolicnik je "\cf1  << kol << endl;\par
+\par
+    \}\par
+\cf7\ul     \b\f2 try\f1  (string exceptionString \{\par
+\cf1\ulnone\b0         cout << exceptionString;\par
+    \}\par
+    \cf4 return\cf1  0;\par
+\f2\}\f1\par
+\f2\lang9\par
+\cf7\ul\b\lang1033 #linije koje su pogresne su oznacene ovako\f1\lang9\par
+
+\pard\sl240\slmult1\cf1\ulnone\b0\par
+\par
+\f2\lang1033 22.Sta ce biti prikazano na standardnom izlazu nakon izvrsavanja sledeceg koda\line\line\cf6\f1 #include\cf1  \cf3 <iostream>\cf1\par
+\cf4 using\cf1  \cf4 namespace\cf1  std;\par
+\par
+\cf4 void\cf1  druga(\cf4 int\cf1  \cf6 x\cf1 ) \cf4 throw\cf1  (\cf4 int\cf1 )\par
+\{\par
+    \cf4 if\cf1  (\cf6 x\cf1  > 1000) \cf4 throw\cf1  \cf6 x\cf1 ;\par
+\}\par
+\par
+\cf4 void\cf1  prva(\cf4 int\cf1  \cf6 x\cf1 )\par
+\{\par
+    \cf4 try\cf1\par
+    \{\par
+        druga(1200);\par
+    \}\par
+    \cf4 catch\cf1  (...)\par
+    \{\par
+        \cf4 throw\cf1  \cf6 x\cf1  * 10;\par
+    \}\par
+\}\par
+\par
+\cf4 int\cf1  main() \{\par
+    \cf4 try\cf1\par
+    \{\par
+        prva(10);\par
+    \}\par
+    \cf4 catch\cf1  (\cf4 int\cf1  vred)\par
+    \{\par
+        cout \cf5 <<\cf1  vred \cf5 <<\cf1  endl;\par
+    \}\par
+\par
+    \cf4 return\cf1  0;\lang9\par
+\f2\lang1033\}\par
+\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\b 100\b0\f1\lang9\par
+
+\pard\sl240\slmult1\par
+\b\f2\lang1033\par
+\b0 23.Oznacite linije koje sadrze greske u sledecem programskom kodu:\f1\lang9\par
+\par
+\cf4 void\cf1  fun(\cf4 int\cf1  \cf6 x\cf1 ) \cf4 throw\cf1  ()\par
+\{\par
+\cf7\ul\b     if (x < 10) throw 10.0;\par
+\cf1\ulnone\b0\}\par
+\par
+\cf4 int\cf1  main() \{\par
+    fun(5);\par
+    \cf4 return\cf1  0;\par
+\f2\lang1033\}\f1\lang9\par
+\par
+\par
+\par
+\f2\lang1033 24.Operator umetanja u izlazni tok je:\par
+\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\b <<\b0\f1\lang9\par
+
+\pard\sl240\slmult1\par
+\par
+\f2\lang1033 25.Preciznije podesavanje formata etodima klase ios vrsi se sledecim funkcijama:\par
+\b\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1 precision()\par
+{\pntext\f4\'B7\tab}width()\par
+{\pntext\f4\'B7\tab}fill()\f1\lang9\par
+
+\pard\sl240\slmult1\b0\par
+\par
+\f2\lang1033 26.Povecanje dimenzija vektora (capacity) cija je postojeca dimenzija N vrsi se:\par
+\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\b Zavisno od implementacije, za kN elemenata, gde je k obicno 1,5 ili 2\f1\lang9\par
+
+\pard\sl240\slmult1\par
+\f2\lang1033\par
+\b0 27. Ponavljanje prijave izuzetka se vrsi naredbom?\par
+\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\b throw.\f1\lang9\par
+
+\pard\sl240\slmult1\b0\par
+\par
+\f2\lang1033 28. Oznacite linije koda koje su pogresne\f1\lang9\par
+\par
+\cf4 template\cf1  <\cf4 class\cf1  \cf2 T1\cf1 ,\cf4 class\cf1  \cf2 T2\cf1 >\par
+\cf7\ul\b T1 sum(T1 x, T1 y)\cf1\ulnone\b0\par
+\{\par
+    \cf4 return\cf1  \cf6 x\cf1  + \cf6 y\cf1 ;\par
+\}\par
+\par
+\cf4 int\cf1  main() \{\par
+    \cf4 int\cf1  n1\{ 300 \};\par
+    \cf4 double\cf1  n2\{ 30.0 \};\cf7\ul\b\par
+    cout << sum(n1, n2) << endl;\par
+\cf1\ulnone\b0     \cf4 return\cf1  0;\par
+\f2\lang1033\}\par
+\par
+\par
+29. Pametni pokazivaci (smart pointers)\par
+\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\b Automatski uklanjaju objekte kad na njih vise ne pokazuje nijedan pokazivac\par
+{\pntext\f4\'B7\tab}Koriste brojace referenci (reference counting)\f1\lang9\par
+
+\pard\sl240\slmult1\par
+\par
+\b0\f2\lang1033 30.Dodavanje novog elementa iza poslednjeg elementa vektora:\par
+\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\b Zahteva kopiranje postoje\f3\'e6ih elemenata samo ako je prevazi\'f0en kapacitet vektora (capacity)\f1\lang9\par
+{\pntext\f4\'B7\tab}Zahteva pove\f3\'e6anje dimenzija vektora samo ako je prevazi\'f0en kapacitet vektora (capacity)\f1\par
+
+\pard\sl240\slmult1\b0\par
+\par
+\f2\lang1033 31.osonvne kategorije U/I tokova u jeziku C++ su:\f1\lang9\par
+\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\b Tekstualni\par
+{\pntext\f4\'B7\tab}Binarni\par
+
+\pard\sl240\slmult1\par
+\b0\par
+\f2\lang1033 32. Alokatori STL kontejnera:\par
+\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\b Omogucavaju automatsko se prilagodjavanje STL kontejnera broju elemenata koji se u njih smestaju\b0\f1\lang9\par
+{\pntext\f4\'B7\tab}\b\f2\lang1033 Za postojece klase STL kontejnera mogu se definisati sopstveni alokatori\b0\f1\lang9\par
+{\pntext\f4\'B7\tab}\b\f2\lang1033 Omogucavaju automatsko se prilagodjavanje STL kontejnera tipu elemenata koji se u njih smestaju\b0\f1\lang9\par
+
+\pard\sl240\slmult1\par
+\par
+\f2\lang1033 33.Format podataka u ulazno-izlaznim operacijama moze se precizno definisati\par
+\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\b Pomocu manipulatorskih funkcija\f1\lang9\par
+{\pntext\f4\'B7\tab}\f2\lang1033 Pomocu metoda klase ios\f1\lang9\par
+
+\pard\sl240\slmult1\par
+\f2\lang1033\par
+\b0 34.Koja od klasa izuzetaka je predefinisana u jeziku C++\par
+\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\b Overflow_error\par
+{\pntext\f4\'B7\tab}Runtime_error\par
+{\pntext\f4\'B7\tab}Bad_exeption\par
+{\pntext\f4\'B7\tab}Underflow_error\par
+{\pntext\f4\'B7\tab}Logic_error\par
+{\pntext\f4\'B7\tab}Exception\f1\lang9\par
+
+\pard\sl240\slmult1\b0\par
+\par
+\f2\lang1033 35.Obelezi ispravne tvrdnje\par
+\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1 Izvrsavanje naredbe \ldblquote throw\rdblquote  naziva se prijavl;jivanje izuzetka (engl. Throwing an exception)\par
+{\pntext\f4\'B7\tab}Blok catch sadrzi kod koji se izvrsava kada se dogodi izuzetak\f1\lang9\par
+{\pntext\f4\'B7\tab}\f2\lang1033 Moze se prijaviti vrednost bilo kojeg tipa\f1\lang9\par
+
+\pard\sl240\slmult1\par
+\f2\lang1033\par
+36.Za prijavljivanje izuzetaka u konstruktorima i detruktorima klasa vazi:\par
+\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\b Konstruktori mogu da prijavljuju izuzetke\par
+{\pntext\f4\'B7\tab}Dekonstruktori mogu da prijavljuju izuzetke\f1\lang9\par
+
+\pard\sl240\slmult1\b0\par
+\par
+\f2\lang1033 37.U sta spadaju manipulatorske funkcije\par
+\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\b Mogu se koristiti I kao standardne funkcije, ciji je argument object tipa tok\par
+{\pntext\f4\'B7\tab}Menjaju parametre formatiranja tokova\par
+{\pntext\f4\'B7\tab}Umecu ili izdvajaju odredjene specijalne znakove\f1\lang9\par
+
+\pard\sl240\slmult1\b0\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\cf0\f0\fs22\par
+}
+ 
